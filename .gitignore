@@ -1,0 +1,4 @@
+**/bin
+**/*.hidden
+**/*.exe
+**/ext
