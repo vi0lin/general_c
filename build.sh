@@ -63,3 +63,7 @@ build_mouse() {
   glfw_dll="bin/glfw3.dll"
   send $password $glfw_dll $ssh_target $remote_path
 }
+build_markdown() {
+  file="bin/markdown"
+  gcc -Dmarkdown=main markdown.c -o ${file} && echo "Success ${file}"
+}

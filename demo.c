@@ -735,6 +735,10 @@ int Timeout() {
   }
 }
 
+int Markdown() {
+  markdown();
+}
+
 int CheckSelectSlot() {
   timeout(1);
   select_slot(0);

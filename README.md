@@ -10,3 +10,11 @@ Run this in the project cwd.
 git clone https://github.com/vi0lin/general_c
 ( cd general_c && source build.sh && download && build_mouse FirefoxDom )
 ```
+
+# Markdown
+```
+source build.sh && build_markdown && cat README.md | bin/markdown > ~/README_markdown.html
+```
+
+# Project State
+![Current Project State](https://raw.githubusercontent.com/vi0lin/general_c/refs/heads/main/projectstate.webp)
