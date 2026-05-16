@@ -15,6 +15,3 @@ git clone https://github.com/vi0lin/general_c
 ```
 source build.sh && build_markdown && cat README.md | bin/markdown > ~/README_markdown.html
 ```
-
-# Project State
-![Current Project State](https://raw.githubusercontent.com/vi0lin/general_c/refs/heads/main/projectstate.webp)
