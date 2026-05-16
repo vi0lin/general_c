@@ -7,5 +7,6 @@ It remains difficult to provide a stable version.
 # Build
 Run this in the project cwd.
 ```
-source build.sh && download && build_mouse FirefoxDom
+git clone https://github.com/vi0lin/general_c
+( cd general_c && source build.sh && download && build_mouse FirefoxDom )
 ```
