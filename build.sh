@@ -1,14 +1,19 @@
 #!/bin/bash
+#!/bin/bash
 
-download_glfw() {
-  git clone https://github.com/glfw/glfw.git
+clone() {
+  if [ ! -d $1 ]; then git clone $2 $1; fi
 }
-
+download() {
+  if [ ! -d ext ]; then mkdir -p ext; fi
+  clone ext/glfw  https://github.com/glfw/glfw.git
+  clone ext/imgui https://github.com/ocornut/imgui
+  clone ext/Vulkan-Headers https://github.com/KhronosGroup/Vulkan-Headers.git
+}
 # cmake .. -DCMAKE_INSTALL_PREFIX=./binary \
 build_glfw() {
   pwd=`pwd`
-  if [ ! -d glfw ]; then download_glfw; fi
-  cd glfw
+  cd ext/glfw
   mkdir build-mingw
   cd build-mingw
   # cmake .. -DCMAKE_INSTALL_PREFIX=/usr/x86_64-w64-mingw32 \
@@ -39,7 +44,6 @@ build_mouse() {
   mainfunction=$1
   include="-Iext/glfw/build-mingw/binary/include"
   include+=" -Iext/Vulkan-Headers/include"
-  include+=" -Iext"
   lib="-Lbin/"
 
   add="${include} ${lib} ${bin}"

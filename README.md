@@ -3,3 +3,9 @@ I'm building my C libraries. I'm a beginner in C programming, and this project i
 
 I use claude.ai and grok.com for almost anything.
 It remains difficult to provide a stable version.
+
+# Build
+Run this in the project cwd.
+```
+source build.sh && download && build_mouse FirefoxDom
+```
