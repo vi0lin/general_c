@@ -1,4 +1,5 @@
 // gcc morse.c timeout.c -o bin/morse && ./bin/morse
+// Github push -u github wurzeltal:main
 // gcc
 #include <stdio.h>
 #include <stdbool.h>
